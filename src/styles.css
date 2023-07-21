@@ -1,0 +1,11 @@
+@import "@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  background-color: #512da8;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+}

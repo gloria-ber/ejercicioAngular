@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="boton">
+    <button
+      mat-raised-button
+      (click)="mostrarOcultar()"
+      *ngIf="mostrarLista"
+      color="accent"
+    >
+      Ocultar Lista
+    </button>
+    <button
+      mat-raised-button
+      (click)="mostrarOcultar()"
+      *ngIf="!mostrarLista"
+      color="accent"
+    >
+      Mostrar Lista
+    </button>
+  </div>
+  <table *ngIf="mostrarLista">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th class="price">Precio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="filas" *ngFor="let product of products">
+        <td>{{ product.id }}</td>
+        <td>{{ product.name }}</td>
+        <td class="price">{{ product.price | currency }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="!mostrarLista" class="noHay">No hay elementos para mostrar.</div>
+  
+</div>
